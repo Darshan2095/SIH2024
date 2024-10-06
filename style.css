@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.services-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.service-card {
+    background-color: #0077A8;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    margin-bottom: 15px;
+}
+
+.service-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.service-button {
+    background-color: #fff;
+    color: #0077A8;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: auto; /* To push the button to the bottom */
+    text-align: center;
+}
+
+.service-button:hover {
+    background-color: #005f85;
+    color: #fff;
+}
+
+.icon {
+    text-align: right;
+}
+
+.icon i {
+    font-size: 1.5rem;
+}
+.ext{
+    width: 80vw;
+    margin: auto;
+   height: max-content;
+}
+
+.navbar{
+    background-color: #6c757d;
+    height: 10vh;
+    color: #ddd;
+}
+.navbar a{
+    color: #ddd;
+    font-size: large;
+}
+.aj{
+    color: #131313;
+}
+.title{
+    position: relative;
+    right: 40%;
+}
+
+.container-fluid{
+    width: max-content;
+}
+/* Footer Styles */
+.footer {
+    background-color: #8f9196;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    margin: 15px;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0056b3;
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+  }
+  
+  .footer-section a {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    color: #666;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+  }
+.bookbtns{
+    display: flex;
+    justify-content: space-evenly;
+}
+#book{
+    font-weight: 800;
+    font-size: large;
+    height: 5vh;
+    width: 15vw;
+    border: none;
+    border-radius: 10px;
+    padding: 1%;
+    transition: all 0.3s;
+    color:black;
+    background-color: rgb(112, 239, 178);
+    
+}
+.space{
+    height: 10vh;
+}
+.booking{
+    padding: 5%;
+}
+
+#book:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+}
+
+.advantages{
+
+    width: 80vw;
+   margin: auto;
+    height:fit-content;
+    background-color: rgba(24, 138, 75, 0.266);
+    
+    border-radius: 5%;
+
+}
+.ad{
+    padding: 5%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.left{
+    width: 30%;
+    height: max-content;
+}
+.right{
+    width: 70%;
+    height: max-content;
+    padding: 5%;
+}
+
+.departments{
+    
+    background-color: gainsboro;
+    width: 80vw;
+    height: fit-content;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+   
+    border-radius: 5%;
+
+}
+
+.imagefit{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 5%;
+}
+
+
+
+.row1{
+    display: flex;
+    justify-content: space-around;
+
+}
+.line{
+    margin: 2%;
+    background-color: black;
+    width:100%;
+    height: 2px;
+}
+.doctors{
+    margin-bottom: 5%;
+    border-radius: 5%;
+    width: 80vw;
+    margin: auto;
+    background-color: gainsboro;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card .content {
+    padding: 10px;
+  }
+  
+  .card .content h3 {
+    margin-top: 0;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s;
+  }
+  .card:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  }
+

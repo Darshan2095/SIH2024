@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Availability</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        
+        .controls,
+        .date-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .controls label {
+            margin-right: 8px;
+        }
+        
+        .controls select {
+            padding: 5px;
+        }
+        
+        #selected-date {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .time-frames a {
+            margin: 0 5px;
+            color: blue;
+            text-decoration: none;
+        }
+        
+        .time-frames a:hover {
+            text-decoration: underline;
+        }
+        
+        .date-navigation {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .date-navigation button,
+        .date-navigation input {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        
+        .date-navigation input {
+            width: 140px;
+        }
+        
+        .view-options {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .view-options button {
+            padding: 10px 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .view-options button:hover {
+            background-color: #0056b3;
+        }
+        
+        
+        .container1 {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .doctor-info {
+            width: 25%;
+            text-align: center;
+        }
+        
+        .doctor-info h2 {
+            margin-bottom: 10px;
+        }
+        
+        .doctor-info p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .status-out {
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .new-availability,
+        .new-busy-time,
+        .create-notification {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .new-availability {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .new-busy-time {
+            background-color: #ff4757;
+            color: white;
+        }
+        
+        .create-notification {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .schedule {
+            width: 70%;
+            display: flex;
+        }
+        
+        .availability {
+            width: 40%;
+        }
+        
+        .availability p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        
+        .availability span {
+            color: gray;
+        }
+        
+        .availability a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        
+        .time-slots {
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+        .row {
+            border: 1px solid black;
+            
+            padding: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .time-header {
+            width: 20%;
+            font-weight: bold;
+        }
+        
+        .slot {
+            width: 25%;
+            height: 40px;
+            background-color: #dcdcdc;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        
+        .slot.available {
+            background-color: #28a745;
+        }
+        
+        .slot.unavailable {
+            background-color: #ff4757;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+
+        <div class="date-selector">
+            <form action="">
+            <span id="selected-date">Wednesday</span>
+            <span id="selected-date"> 25 May</span>
+            <span id="selected-date"> 2022</span>
+            </form>
+           
+            <div class="date-navigation">
+                <button id="prev-day">Prev</button>
+                <input type="date" id="date-picker" value="2022-05-25">
+                <button id="next-day">Next</button>
+            </div>
+          
+        </div>
+    </div>
+
+  
+
+    
+
+    <div class="container1">
+        <div class="doctor-info">
+            <h2>Dr. Kailash Gokral</h2>
+            <p>Paediatrics</p>
+            <button class="status-out">OUT</button>
+            <button class="new-availability">Available</button>
+            
+           
+        </div>
+        <div class="schedule">
+            <div class="availability">
+                <p>10:00 AM - 01:20 PM</p>
+                <span>Consultation</span><br>
+                <a href="#">Edit Shift</a> | <a href="#">Block</a> | <a href="#">Print</a>
+                <p>02:00 PM - 08:00 PM</p>
+                <span>Video Consultation</span><br>
+                <a href="#">Edit Shift</a> | <a href="#">Block</a> | <a href="#">Print</a>
+            </div>
+            <div class="time-slots">
+                <div class="row">
+                    <div class="time-header">7 AM</div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                    <div class="slot"></div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>
